@@ -1,0 +1,12 @@
+version: '3'
+services:
+  jupyter:
+    restart: always
+    build: .
+    container_name: "jupyter"
+    volumes:
+      - ./work:/code
+    ports:
+      - "80:8888"
+    tty: true
+    working_dir: "/code"
